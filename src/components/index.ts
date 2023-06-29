@@ -1,6 +1,10 @@
-export * as Add from './add/add.vue';
-export * from './close/close.vue';
-export * from './edit/edit.vue';
-export * from './more/more.vue';
-export * from './tray/tray.vue';
-export * from './delete/delete.vue';
+import Add from './add/add.vue';
+import Close from './close/close.vue';
+import Edit  from './edit/edit.vue';
+import More from './more/more.vue';
+import Tray from './tray/tray.vue';
+import Delete  from './delete/delete.vue';
+
+export {
+    Add,Close,Edit,More,Tray,Delete
+}

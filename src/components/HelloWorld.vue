@@ -2,7 +2,7 @@
 
 <div>
     <h3>基础图标</h3>
-    <Add  :width="48" :height="48" :parentDeep="3"  />
+    <Add  :width="48" :height="48" :parentDeep="3"  :animation="false" />
 
     <Close :width="48" :height="48" :parentDeep="3" :animation="false" />
 
@@ -78,11 +78,11 @@
 <script setup lang="ts">
 import tray from '@/components/tray/tray.vue'
 // import Add from '@/components/add/add.vue'
-import Close from '@/components/close/close.vue'
+// import Close from '@/components/close/close.vue'
 import More from '@/components/more/more.vue'
 import Edit from '@/components/edit/edit.vue'
 import Delete from '@/components/delete/delete.vue'
-import {Add} from 'rare-icon'
+import {Add, Close} from 'rare-icon'
 
 
 defineProps<{ msg: string }>()

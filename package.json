@@ -1,11 +1,11 @@
 {
   "name": "rare-icon",
-  "version": "0.0.6",
+  "version": "0.0.9",
   "type": "module",
   "main": "lib/rare-icon.js",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --declaration --emitDeclarationOnly --noEmitMappings --outDir lib && vite build",
+    "build": "vite build && vue-tsc --declaration --emitDeclarationOnly --outDir lib",
     "preview": "vite preview",
     "publish": "npm publish --access public"
   },
@@ -22,7 +22,7 @@
     "animejs": "^3.2.1",
     "color": "^4.2.3",
     "gsap": "^3.12.1",
-    "rare-icon": "^0.0.6",
+    "rare-icon": "^0.0.9",
     "sass": "^1.63.6",
     "unplugin-vue-components": "^0.25.1",
     "vite-plugin-dts": "^3.0.0-beta.2",

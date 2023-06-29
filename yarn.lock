@@ -1253,16 +1253,16 @@ queue-microtask@^1.2.2:
   resolved "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
-rare-icon@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/rare-icon/-/rare-icon-0.0.6.tgz#1bb5a508be448d2eb0cf26ec0162d507036c98b4"
-  integrity sha512-MOMKO0FPoHvWGcwAh8b37q70d8lPwGjJPW6R8X74z4lgQXEnpvCbCseKrviowXmQK6IKGxXbMSmQwsdrZYDrgA==
+rare-icon@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/rare-icon/-/rare-icon-0.0.9.tgz#c4db848f90754df2e1cd0fba3d5b7b8d4270a9b2"
+  integrity sha512-+OC+DhHr0t5xXuB8tI5f1fCgblnmaoBXpwypQvS4zpWyY2hwNNgvE4EyEoBR7NEHsC9cf4Fy1hX1PPywImy0YQ==
   dependencies:
     "@vitejs/plugin-vue-jsx" "^3.0.1"
     animejs "^3.2.1"
     color "^4.2.3"
     gsap "^3.12.1"
-    rare-icon "^0.0.6"
+    rare-icon "^0.0.9"
     sass "^1.63.6"
     unplugin-vue-components "^0.25.1"
     vite-plugin-dts "^3.0.0-beta.2"
@@ -1477,7 +1477,7 @@ vite-plugin-dts@^3.0.0-beta.2:
     rollup "*"
     vite "^4.3.9"
 
-vite@*, vite@^4.3.9:
+vite@^4.3.9:
   version "4.3.9"
   resolved "https://registry.npmjs.org/vite/-/vite-4.3.9.tgz"
   integrity sha512-qsTNZjO9NoJNW7KnOrgYwczm0WctJ8m/yqYAMAK9Lxt4SoySUfS5S8ia9K7JHpa3KEeMfyF8LoJ3c5NeBJy6pg==
