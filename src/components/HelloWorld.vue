@@ -73,7 +73,7 @@
 
   <div>
     <h3>支持下拉</h3>
-    <Select key-id="1" show-key="1"  :width="62" :height="62" :duration="1"  hover-color="red" :rotate="360" hover :animation="false">
+    <Select  :width="62" :height="62" :duration="1"  hover-color="red" :rotate="360" hover :animation="false">
       <tray linecap="round" :duration=".5">
         <Add :width="48" :height="48" :parentDeep="3" :animation="false" @click="clickAdd" hoverColor="green" />
       </tray>
@@ -83,7 +83,7 @@
       </tray>
     </Select>
 
-    <Select key-id="1" show-key="1"  :width="62" :height="62" :duration="3"  hover-color="red" :rotate="3600" :animation="false"> 
+    <Select :width="62" :height="62" :duration="3"  hover-color="red" :rotate="3600" :animation="false"> 
       <tray linecap="round" :duration=".5">
         <Add :width="48" :height="48" :parentDeep="3" :animation="false" @click="clickAdd" hoverColor="green" />
       </tray>
@@ -95,7 +95,7 @@
       </tray>
     </Select>
 
-    <Select key-id="1" show-key="1"  :width="62" :height="62"  :parentDeep="1" :duration="3"  hover-color="red" :rotate="3600">
+    <Select :width="62" :height="62"  :parentDeep="1" :duration="3"  hover-color="red" :rotate="3600">
       <tray linecap="round" :duration=".5">
         <Add :width="48" :height="48" :parentDeep="3" :animation="false" @click="clickAdd" hoverColor="green" />
       </tray>

@@ -6,7 +6,7 @@
     }" @mouseenter="optMore" @mouseleave="optMore">
         <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" @click="optMore" :width="props.width"
             :height="props.height" id="root" :style="{ '--hover-color': props.hoverColor }">
-            <path class="rare-more" ref="point11"
+            <path class="rare-more" ref="moreRef"
                 d="M227.14123 413.647995c-52.14973 0-94.587262 42.439578-94.587262 94.587262 0 52.14973 42.437531 94.587262 94.587262 94.587262 52.147684 0 94.587262-42.437531 94.587262-94.587262C321.728492 456.087573 279.288914 413.647995 227.14123 413.647995z M510.903016 413.647995c-52.14973 0-94.587262 42.439578-94.587262 94.587262 0 52.14973 42.437531 94.587262 94.587262 94.587262 52.147684 0 94.587262-42.437531 94.587262-94.587262C605.490278 456.087573 563.051723 413.647995 510.903016 413.647995z M794.665825 413.647995c-52.14973 0-94.587262 42.439578-94.587262 94.587262 0 52.14973 42.437531 94.587262 94.587262 94.587262 52.147684 0 94.587262-42.437531 94.587262-94.587262C889.253086 456.087573 846.813508 413.647995 794.665825 413.647995z"
                 :fill="props.color" p-id="2443"></path>
         </svg>
@@ -32,11 +32,6 @@ import { watch, reactive, toRefs, ref, nextTick, onMounted } from 'vue';
 import { addHoverClassEvent } from '@/utils/utils';
 
 const props = defineProps({
-    keyId: {
-        type: String,
-        default: '1'
-    },
-
     hover: {
         type: Boolean,
         default: false
@@ -86,11 +81,6 @@ const props = defineProps({
         type: Number,
         default: 48
     },
-
-    showKey: {
-        type: String,
-        default: '1'
-    },
     changeShow: {
         type: Function,
         default: undefined
@@ -103,7 +93,7 @@ const state = reactive({
 const { show } = toRefs(state)
 const root = ref<HTMLDivElement>()
 const drawerBody = ref<HTMLElement>()
-const point11 = ref()
+const moreRef = ref()
 
 defineEmits(['open', 'close', 'update:visible'])
 
@@ -165,7 +155,7 @@ onMounted(() => {
         let duration = 0.3
         const tl = gsap.timeline({ paused: true });
         // transformOrigin 设置旋转中心,应该为view/2
-        tl.fromTo(point11.value.parentElement, { opacity: 0, transformOrigin: "center" }, { opacity: 1, fill: props.color })
+        tl.fromTo(moreRef.value.parentElement, { opacity: 0, transformOrigin: "center" }, { opacity: 1, fill: props.color })
         // 监听鼠标事件，触发动画
         onHoverTarger.addEventListener('mouseenter', () => {
             tl.play().duration(duration)
@@ -183,7 +173,7 @@ onMounted(() => {
 
     tv = (() => {
         gsap.registerPlugin(MorphSVGPlugin)
-        let kk = MorphSVGPlugin.convertToPath([point11.value])
+        let kk = MorphSVGPlugin.convertToPath([moreRef.value])
         let tl = gsap.timeline({
             paused: true,
         })
