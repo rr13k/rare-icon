@@ -37,7 +37,7 @@
 
   <div>
     <h3>标准用法(hover this)</h3>
-    <tray linecap="round" :duration="1">
+    <tray linecap="round" :duration="1" color="red">
       <Add :color="'black'" :width="48" :height="48" :parentDeep="3" :animation="true" hoverColor="#67C23A" />
     </tray>
 

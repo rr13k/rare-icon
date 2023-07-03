@@ -67,12 +67,9 @@ onMounted(() => {
   if (props.animation){
     // 定义SVG元素的动画效果 
     const tl = gsap.timeline({ paused: true});
-
-    let fromColor = color(props.color)?.alpha(.1)?.toString()
-    let toColor = color(props.color)?.alpha(.7)?.toString()
     // transformOrigin 设置旋转中心,应该为view/2
-    tl.fromTo(closeline1, { attr: { x1: '40', x2: '40', stroke: fromColor, 'stroke-linecap': 'butt'}, transformOrigin: "center" }, { attr: { x1: "10", x2: "70", stroke: toColor,'stroke-linecap': props.linecap}, duration:props.duration,rotation: 360 })
-    tl.fromTo(closeline2, { attr: { x1: '40', y1: "40", x2: '40', y2: "40", stroke: fromColor, 'stroke-linecap': 'butt' }, transformOrigin: "center" }, { attr: { x1: "40", y1: "10", x2: "40", y2: "70", stroke: toColor,'stroke-linecap': props.linecap }, duration:props.duration, rotation: 360 }, 0)
+    tl.fromTo(closeline1, { attr: { x1: '40', x2: '40',   'stroke-linecap': 'butt'}, opacity:0.1,transformOrigin: "center" }, { attr: { x1: "10", x2: "70", stroke: props.color,'stroke-linecap': props.linecap},opacity:1, duration:props.duration,rotation: 360 })
+    tl.fromTo(closeline2, { attr: { x1: '40', y1: "40", x2: '40', y2: "40", 'stroke-linecap': 'butt' },opacity:0.1, transformOrigin: "center" }, { attr: { x1: "40", y1: "10", x2: "40", y2: "70", stroke:  props.color,'stroke-linecap': props.linecap }, opacity:1, duration:props.duration, rotation: 360 }, 0)
     // 监听鼠标事件，触发动画
     onHoverTarger?.addEventListener('mouseenter', () => {
       tl.play();
