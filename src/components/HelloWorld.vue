@@ -73,7 +73,7 @@
 
   <div>
     <h3>支持下拉</h3>
-    <Select  :width="62" :height="62" :duration="1"  hover-color="red" :rotate="360" hover :animation="false">
+    <Select :width="62" :height="62" :duration="1" hover-color="red" :rotate="360" hover :animation="false">
       <tray linecap="round" :duration=".5">
         <Add :width="48" :height="48" :parentDeep="3" :animation="false" @click="clickAdd" hoverColor="green" />
       </tray>
@@ -83,7 +83,7 @@
       </tray>
     </Select>
 
-    <Select :width="62" :height="62" :duration="3"  hover-color="red" :rotate="3600" :animation="false"> 
+    <Select :width="62" :height="62" :duration="3" hover-color="red" :rotate="3600" :animation="false">
       <tray linecap="round" :duration=".5">
         <Add :width="48" :height="48" :parentDeep="3" :animation="false" @click="clickAdd" hoverColor="green" />
       </tray>
@@ -95,7 +95,7 @@
       </tray>
     </Select>
 
-    <Select :width="62" :height="62"  :parentDeep="1" :duration="3"  hover-color="red" :rotate="3600">
+    <Select :width="62" :height="62" :parentDeep="1" :duration="3" hover-color="red" :rotate="3600">
       <tray linecap="round" :duration=".5">
         <Add :width="48" :height="48" :parentDeep="3" :animation="false" @click="clickAdd" hoverColor="green" />
       </tray>
@@ -104,6 +104,17 @@
         <Delete :parentDeep="3" :width="48" :height="48" hoverColor="red" :animation="false" />
       </tray>
     </Select>
+  </div>
+
+  <div>
+    <h3>使用绝对定位</h3>
+    <div style="width: 200px; height: 100px;background-color: rgb(29, 200, 219);position: relative;">
+      <Select :width="62" :height="62" :duration="3"  style="position: absolute;right: 0;top: 0;" hover-color="red" :rotate="3600" :animation="false">
+        <tray linecap="round" :duration=".5">
+          <Delete :parentDeep="3" :width="48" :height="48" hoverColor="red" :animation="false" />
+        </tray>
+      </Select>
+    </div>
   </div>
 </template>
 <script setup lang="ts">

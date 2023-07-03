@@ -17,4 +17,6 @@ yarn add rare-icon
 
 ```js
 import {Close} from 'rare-icon'
+// 注意需要引用样式文件
+import 'rare-icon/lib/style.css'  
 ```

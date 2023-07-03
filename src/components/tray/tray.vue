@@ -4,7 +4,7 @@
       backgroundColor: props.color,
       borderRadius: props.linecap == 'round' ? '5px' : '0px'}">
     </div>
-    <div ref="slotTarget" style="height: inherit;line-height: 0px;">
+    <div ref="slotTarget" style="height: inherit;line-height: 0px;z-index: 1;position: relative;">
       <slot ></slot>
     </div>
   </cite>
@@ -69,6 +69,5 @@ onMounted(() => {
   height: 100%;
   left: 0px;
   top: 0px;
-  z-index: -1;
 }
 </style>
