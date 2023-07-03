@@ -4,17 +4,14 @@
         height: props.height + 'px',
         transition: `all ${props.duration}s ease`
     }" @mouseenter="optMore" @mouseleave="optMore">
-        <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" @click="optMore" :width="props.width"
+        <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" @click.stop="optMore" :width="props.width"
             :height="props.height" id="root" :style="{ '--hover-color': props.hoverColor }">
             <path class="rare-more" ref="moreRef"
                 d="M227.14123 413.647995c-52.14973 0-94.587262 42.439578-94.587262 94.587262 0 52.14973 42.437531 94.587262 94.587262 94.587262 52.147684 0 94.587262-42.437531 94.587262-94.587262C321.728492 456.087573 279.288914 413.647995 227.14123 413.647995z M510.903016 413.647995c-52.14973 0-94.587262 42.439578-94.587262 94.587262 0 52.14973 42.437531 94.587262 94.587262 94.587262 52.147684 0 94.587262-42.437531 94.587262-94.587262C605.490278 456.087573 563.051723 413.647995 510.903016 413.647995z M794.665825 413.647995c-52.14973 0-94.587262 42.439578-94.587262 94.587262 0 52.14973 42.437531 94.587262 94.587262 94.587262 52.147684 0 94.587262-42.437531 94.587262-94.587262C889.253086 456.087573 846.813508 413.647995 794.665825 413.647995z"
                 :fill="props.color" p-id="2443"></path>
-        </svg>
 
-        <!-- 变形target svg -->
-        <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" :width="props.width"
-            display="none" :height="props.height">
-            <path id="decagon" opacity="0"
+                <!-- 变形target  -->
+                <path id="decagon" opacity="0"
                 d="M722.773333 381.44a64 64 0 0 1 90.453334 90.453333l-252.970667 253.013334a68.266667 68.266667 0 0 1-96.512 0l-253.013333-253.013334a64 64 0 0 1 90.538666-90.453333L512 592.128l210.773333-210.773333z"
                 fill="#111111" p-id="2447"></path>
         </svg>
