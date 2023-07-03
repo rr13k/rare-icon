@@ -36,13 +36,13 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   duration: .3,
   targer: undefined,
-  color: 'black', // 通过透明度渐变
+  color: 'currentColor', // 通过透明度渐变
   strokeWidth: 10,
   rotate: 0,
   parentDeep: 1,
   width: 12,
   height: 12,
-  hoverColor: 'black',
+  hoverColor: 'currentColor',
   linecap: 'butt',
   animation: true
 })
@@ -86,7 +86,7 @@ onMounted(() => {
 </script>
 <style lang="scss" scoped>
 .hover {
-  path {
+  > path {
     fill : var(--hover-color) !important;
   }
 }

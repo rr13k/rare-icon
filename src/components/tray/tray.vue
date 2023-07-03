@@ -1,8 +1,7 @@
 <template>
   <cite class="tray" ref="tray" :style="{padding: props.padding}">
     <div class="bg" ref="bg" :style="{
-      backgroundColor:props.color,
-     
+      backgroundColor: props.color,
       borderRadius: props.linecap == 'round' ? '5px' : '0px'}">
     </div>
     <div ref="slotTarget" style="height: inherit;line-height: 0px;">
@@ -41,12 +40,12 @@ const bg = ref(null)
 const slotTarget = ref(null)
 
 onMounted(() => {
-  const trayDom = bg.value
+  const bgDom = bg.value
   const onHoverTarger :any= slotTarget.value
 
   const tl = gsap.timeline({ paused: true});
   // transformOrigin 设置旋转中心,应该为view/2
-  tl.fromTo(trayDom, { transformOrigin: "center",scale:0 }, { duration:props.duration, scale:1 })
+  tl.fromTo(bgDom, { transformOrigin: "center",scale:0 }, { duration:props.duration, scale:1 })
   onHoverTarger?.addEventListener('mouseenter', () => {
     tl.play();
   });

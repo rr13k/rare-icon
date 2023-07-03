@@ -24,7 +24,7 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   duration: .3,
   targer: undefined,
-  color: 'black', // 通过透明度渐变
+  color: 'currentColor', // 通过透明度渐变
   strokeWidth: 10,
   animation:true,
   rotate: 45,

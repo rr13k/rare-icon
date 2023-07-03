@@ -5,15 +5,19 @@
     :style="{'--hover-color': props.hoverColor}"
     >
     <path
+     id="nihao"
+      class="rare-more"
       ref="point1"
       d="M227.14123 413.647995c-52.14973 0-94.587262 42.439578-94.587262 94.587262 0 52.14973 42.437531 94.587262 94.587262 94.587262 52.147684 0 94.587262-42.437531 94.587262-94.587262C321.728492 456.087573 279.288914 413.647995 227.14123 413.647995z"
       :fill="props.color" p-id="2443"></path>
     <path
+      class="rare-more"
       ref="point2"
       d="M510.903016 413.647995c-52.14973 0-94.587262 42.439578-94.587262 94.587262 0 52.14973 42.437531 94.587262 94.587262 94.587262 52.147684 0 94.587262-42.437531 94.587262-94.587262C605.490278 456.087573 563.051723 413.647995 510.903016 413.647995z"
       :fill="props.color"
       p-id="2444"></path>
     <path
+      class="rare-more"
       ref="point3"
       d="M794.665825 413.647995c-52.14973 0-94.587262 42.439578-94.587262 94.587262 0 52.14973 42.437531 94.587262 94.587262 94.587262 52.147684 0 94.587262-42.437531 94.587262-94.587262C889.253086 456.087573 846.813508 413.647995 794.665825 413.647995z"
       :fill="props.color" p-id="2445"></path>
@@ -22,7 +26,6 @@
 
 <script setup lang='ts'>
 import { onMounted, ref } from 'vue';
-// @ts-ignore
 import { gsap } from 'gsap';
 // @ts-ignore
 import color from 'color'
@@ -45,13 +48,13 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   duration: .3,
   targer: undefined,
-  color: 'black', // 通过透明度渐变
+  color: 'currentColor', // 通过透明度渐变
   strokeWidth: 10,
   rotate: 0,
   parentDeep: 1,
   width: 12,
   height: 12,
-  hoverColor: 'black',
+  hoverColor: 'currentColor',
   linecap: 'butt',
   animation: true
 })
@@ -78,7 +81,6 @@ onMounted(() => {
     console.error("targer is undefined")
   }
 
-
   if(root.value) {
       addHoverClassEvent(root.value)
   }
@@ -99,6 +101,12 @@ onMounted(() => {
       tl.reverse()
     });
   }
+})
+
+defineExpose({
+  point1,
+  point2,
+  point3
 })
 </script>
 

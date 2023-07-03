@@ -1,0 +1,31 @@
+.set{
+    display: inline-block;
+    padding: 0;
+    vertical-align: text-top;
+    margin-right: 5px;
+    border:none !important;
+    cursor: pointer;
+    position: relative;
+    width: 16px;
+    height: 16px;
+    line-height: 18px;
+    overflow: hidden;
+    :nth-child(1){
+        opacity: 1;
+    }
+   
+    >i:hover{
+        background-color: #e8e8e8;
+        font-weight: 600;
+    }
+    i{
+        display: block;
+        transition: all 1s;
+        opacity: 0;
+    }
+}
+
+.runConfig{
+    padding-left: 20px;
+}
+

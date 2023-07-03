@@ -30,13 +30,13 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   duration: .3,
   targer: undefined,
-  color: 'black', // 通过透明度渐变
+  color: 'currentColor', // 通过透明度渐变
   strokeWidth: 10,
   rotate: 0,
   parentDeep: 1,
   width:12,
   height:12,
-  hoverColor: 'black',
+  hoverColor: 'currentColor',
   linecap: 'butt',
   animation: true
 })
@@ -49,8 +49,6 @@ onMounted(() => {
   var onHoverTarger
   const closeline1 = line1.value
   const closeline2 = line2.value
-
-  console.log('linecap',props.linecap)
 
   if (props.parentDeep != undefined && props.parentDeep > 0 && root.value != undefined) {
     var parent:any = root.value
@@ -90,6 +88,7 @@ onMounted(() => {
 <style lang="scss">
 .root:hover{
   line{
+    // transition: all .3s;
     stroke: var(--hover-color,'black'); 
   }
 }

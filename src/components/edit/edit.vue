@@ -30,13 +30,13 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   duration: .3,
   targer: undefined,
-  color: 'black', // 通过透明度渐变
+  color: 'currentColor', // 通过透明度渐变
   strokeWidth: 50,
   rotate: 0,
   parentDeep: 1,
   width: 12,
   height: 12,
-  hoverColor: 'black',
+  hoverColor: 'currentColor',
   linecap: 'butt',
   animation: true
 })
@@ -65,10 +65,8 @@ onMounted(() => {
   if(root.value) {
       addHoverClassEvent(root.value)
   }
-
+  
   if (props.animation && onHoverTarger) {
-    let fromColor = color(props.color).alpha(.1).string()
-
     // 定义SVG元素的动画效果 
     const tl = gsap.timeline({ paused: true});
 
@@ -77,8 +75,8 @@ onMounted(() => {
     let strokeDasharray = `${length} ${length}`
     let strokeDashoffset = length
 
-    tl.fromTo(line1.value, { attr: { stroke:fromColor},opacity:0.1, strokeDashoffset:strokeDashoffset,strokeDasharray:strokeDasharray, transformOrigin: "center" }, { attr: { stroke:props.color},opacity:1,strokeDashoffset:0, duration:props.duration})
-    tl.fromTo(line2.value, { attr: { stroke:fromColor},strokeDashoffset:strokeDashoffset,strokeDasharray:strokeDasharray,opacity:0.1, transformOrigin: "center" }, { attr: { stroke:props.color},opacity:1,strokeDashoffset:0, duration:props.duration},0)
+    tl.fromTo(line1.value, { attr: { stroke:props.color},opacity:0.1, strokeDashoffset:strokeDashoffset,strokeDasharray:strokeDasharray, transformOrigin: "center" }, { attr: { stroke:props.color},opacity:1,strokeDashoffset:0, duration:props.duration})
+    tl.fromTo(line2.value, { attr: { stroke:props.color},strokeDashoffset:strokeDashoffset,strokeDasharray:strokeDasharray,opacity:0.1, transformOrigin: "center" }, { attr: { stroke:props.color},opacity:1,strokeDashoffset:0, duration:props.duration},0)
     
     // 监听鼠标事件，触发动画
     onHoverTarger?.addEventListener('mouseenter', () => {

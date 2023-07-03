@@ -1,6 +1,6 @@
 {
   "name": "rare-icon",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "type": "module",
   "main": "lib/rare-icon.js",
   "scripts": {
@@ -21,7 +21,7 @@
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "animejs": "^3.2.1",
     "color": "^4.2.3",
-    "gsap": "^3.12.1",
+    "gsap": "file:gsap-bonus.tgz",
     "rare-icon": "^0.0.9",
     "sass": "^1.63.6",
     "unplugin-vue-components": "^0.25.1",
